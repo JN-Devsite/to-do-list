@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -16,9 +17,11 @@ class TaskController extends Controller
     {
         // dd(request());
 
-        request()->validate([
+        $task = request()->validate([
             'task' => ['required', 'max:50', 'min:5']
         ]);
+
+        Task::create($task);
 
         return back()->with('msg', 'Task added');
     }

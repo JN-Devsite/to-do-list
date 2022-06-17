@@ -6,6 +6,10 @@ body {
     height: auto;
 }
 
+.mt-10 {
+    margin-top: 10px;;
+}
+
 .mt-20 {
     margin-top: 20px;;
 }
@@ -16,6 +20,11 @@ body {
 .px-10 {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.py-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .table td:first-child, .table td:nth-child(3) {

@@ -3,3 +3,4 @@
     @csrf
     <button type="submit" class="btn btn-primary btn-block">Add</button>
 </form>
+<x-flash />
