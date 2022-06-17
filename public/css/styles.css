@@ -1,0 +1,31 @@
+body {
+    background-color: #f1f1f1;
+}
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.mt-20 {
+    margin-top: 20px;;
+}
+.mb-60 {
+    margin-bottom: 60px;;
+}
+
+.px-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table td:first-child, .table td:nth-child(3) {
+    width: 30px;
+}
+
+.table td:last-child {
+    width: 70px;
+}
+
+.table>tbody>tr>td {
+    padding: 5px;
+}
