@@ -43,6 +43,8 @@ class TaskController extends Controller
 
     public function destroy(Task $task)
     {
-        dd($task);
+        $task->delete();
+
+        return back()->with('msg', 'Task deleted');
     }
 }
