@@ -27,6 +27,10 @@ body {
     padding-bottom: 5px;
 }
 
+.completed {
+    text-decoration: line-through;
+}
+
 .table td:first-child, .table td:nth-child(3) {
     width: 30px;
 }

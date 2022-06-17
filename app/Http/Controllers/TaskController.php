@@ -9,8 +9,9 @@ class TaskController extends Controller
 {
     public function index()
     {
+        $tasks = Task::all();
 
-        return view('tasks.index');
+        return view('tasks.index', compact('tasks'));
     }
 
     public function store()
@@ -24,5 +25,24 @@ class TaskController extends Controller
         Task::create($task);
 
         return back()->with('msg', 'Task added');
+    }
+
+    public function update(Task $task)
+    {
+
+        $update = request()->validate([
+            'complete' => ['required', 'boolean']
+        ]);
+
+        $task->update($update);
+
+        $message = request()->complete ? 'Task set to complete' : 'Task set to incomplete';
+
+        return back()->with('msg', $message);
+    }
+
+    public function destroy(Task $task)
+    {
+        dd($task);
     }
 }

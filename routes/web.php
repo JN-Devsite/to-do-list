@@ -20,3 +20,5 @@ use App\Http\Controllers\TaskController;
 
 Route::get('/', [TaskController::class, 'index'])->name('home');
 Route::post('add', [TaskController::class, 'store']);
+Route::patch('complete/{task}', [TaskController::class, 'update']);
+Route::delete('delete/{task}', [TaskController::class, 'destroy']);
